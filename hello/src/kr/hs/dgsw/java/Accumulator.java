@@ -4,7 +4,8 @@ public class Accumulator {
     int sum = 0;
 
     void add(int value) {
-        sum = sum + value;
+        Adder adder = new Adder();
+        sum = adder.add(sum,value);
     }
 
     int getSum() {
