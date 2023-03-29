@@ -14,9 +14,9 @@ public class CastingStudy {
         intValue = (int)longValue;
 
         String value = "123";
-        int value2 = (int)value;
+        //int value2 = (int)value;
 
-        boolean booleanValue = (boolean)1;
+        //boolean booleanValue = (boolean)1;
 
         char ch = 'A';
         intValue = (int)ch;
