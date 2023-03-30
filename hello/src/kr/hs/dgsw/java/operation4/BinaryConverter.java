@@ -27,7 +27,7 @@ public class BinaryConverter {
 
     public static void main(String[] args) {
         BinaryConverter converter = new BinaryConverter();
-        String binary = converter.toBinary(-1);
+        String binary = converter.toBinary(15);
         System.out.println(binary);
     }
 }

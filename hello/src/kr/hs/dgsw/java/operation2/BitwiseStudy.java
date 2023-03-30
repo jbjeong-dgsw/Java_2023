@@ -56,9 +56,33 @@ public class BitwiseStudy {
 
     }
 
+    void studyNot() {
+        int value = 0b0101;
+        int not = ~value;
+
+        System.out.printf("~%d = %d\n", value, not);
+    }
+
+    void studyLeftShift() {
+        int value = 0b01000000000000000000000000000000;
+        int count = 1;
+        int shifted = value << count;
+
+        System.out.printf("%d << %d = %d\n", value, count, shifted);
+    }
+
+    void studyRightShift() {
+        int value = 0b10000000000000000000000000000000;
+        int count = 1;
+        int shifted = value >>> count;
+
+        System.out.printf("%d >>> %d = %d\n", value, count, shifted);
+        System.out.println(0b01000000000000000000000000000000);
+    }
+
     public static void main(String[] args) {
         BitwiseStudy object = new BitwiseStudy();
-        object.studyXor();
+        object.studyRightShift();
     }
 
 }
