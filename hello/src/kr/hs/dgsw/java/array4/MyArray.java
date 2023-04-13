@@ -32,7 +32,7 @@ public class MyArray {
      */
     int min() {
        int key = 0;
-       for (int i = 0; i < array.length; i++) {
+       for (int i = 1; i < array.length; i++) {
            if (array[key] > array[i]) {
                key = i;
            }
