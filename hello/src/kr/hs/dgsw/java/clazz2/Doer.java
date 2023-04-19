@@ -24,6 +24,12 @@ public class Doer {
                 rabbit.getName(), rabbit.getAge());
 
 
+        Delimiter object = new Delimiter();
+
+        object.value1 = "Mountain";
+        object.value2 = "Sea";
+        object.value3 = "House";
+
     }
 
 }

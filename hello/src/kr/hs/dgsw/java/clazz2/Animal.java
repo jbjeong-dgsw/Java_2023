@@ -1,7 +1,7 @@
 package kr.hs.dgsw.java.clazz2;
 
 public class Animal {
-    public String name;
+    private String name;
 
     public static int age;
 
