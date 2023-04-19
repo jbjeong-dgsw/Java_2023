@@ -14,7 +14,7 @@ public class Doer {
         rabbit.age = 12;
         Animal.age = 15;
 
-        rabbit.name = "코끼리";
+        //rabbit.name = "코끼리";
         //Animal.name = "코끼리";
 
         System.out.printf("%s 의 나이는 %d 살입니다.\n",
