@@ -7,7 +7,7 @@ public class SubDoer {
         Delimiter object = new Delimiter();
 
         object.value1 = "Mountain";
-        object.value2 = "Sea";
-        object.value3 = "House";
+        //object.value2 = "Sea";
+        //object.value3 = "House";
     }
 }
