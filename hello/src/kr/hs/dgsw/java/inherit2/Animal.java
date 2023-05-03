@@ -19,6 +19,4 @@ public class Animal {
         System.out.println("움직인다.");
     }
 
-
-
 }
