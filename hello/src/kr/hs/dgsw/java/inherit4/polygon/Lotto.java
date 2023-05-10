@@ -12,6 +12,6 @@ public class Lotto {
         } catch (InterruptedException e) {
         }
 
-        System.out.println("뽑힌 사람 : " + (((number / 4) == 0) ? number : 14));
+        System.out.println("뽑힌 사람 : " + number);
     }
 }
