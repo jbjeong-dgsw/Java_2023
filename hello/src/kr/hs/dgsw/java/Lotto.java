@@ -1,4 +1,4 @@
-package kr.hs.dgsw.java.inherit4.polygon;
+package kr.hs.dgsw.java;
 
 import java.util.Random;
 
