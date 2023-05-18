@@ -10,4 +10,6 @@ public interface MyList {
 
     public int size();
 
+    public String remove(int index);
+
 }

@@ -36,6 +36,29 @@ public class MyLinkedList implements MyList {
     }
 
     @Override
+    public String remove(int index) {
+        Node node = head;
+        Node prev = null;
+
+        for (int i = 0 ; i < index ; i++) {
+            if (node == null) {
+                throw new IndexOutOfBoundsException();
+            }
+
+            prev = node;
+            node = node.getNext();
+        }
+
+        if (prev != null) {
+            prev.setNext(node.getNext());
+        } else {
+            head = node.getNext();
+        }
+
+        return node.getValue();
+    }
+
+    @Override
     public int size() {
         Node node = head;
 
@@ -73,6 +96,10 @@ public class MyLinkedList implements MyList {
         System.out.println(list.size());
         System.out.println(list.get(2));
         System.out.println(list.get(3));
+
+        String value = list.remove(2);
+        System.out.println(value);
+        System.out.println(list.size());
 
     }
 }
