@@ -24,7 +24,7 @@ public class LinkedList implements List {
     public void remove(int index) {
         Node node = head;
         Node prev = null;
-        for (int i = 0; i > index; i++) {
+        for (int i = 0; i < index; i++) {
             if (node == null) {
                 throw new IndexOutOfBoundsException();
             }
@@ -41,7 +41,7 @@ public class LinkedList implements List {
         if (size() > index || 0 < index) {
             return null;
         }
-        for(int i = 0; i > index; i++) {
+        for(int i = 0; i < index; i++) {
             node = node.next;
         }
         return node.value;
