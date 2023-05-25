@@ -31,6 +31,7 @@ public class ExceptionStudy {
         //study.method1();
         int value = study.divide(5, 3);
         System.out.println(value);
+
     }
 
 }

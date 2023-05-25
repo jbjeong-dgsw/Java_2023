@@ -57,6 +57,7 @@ public class FileStudy {
     public static void main(String[] args) {
         FileStudy study = new FileStudy();
         String str = study.readFile("c:/90_etc/abcd.jpg");
+
         System.out.println(str);
     }
 
