@@ -1,51 +1,63 @@
 package kr.hs.dgsw.java.exception2;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class FileStudy {
 
-    public String readFile(String filePath) {
-        try {
-            File file = new File(filePath);
-            FileReader fileReader = new FileReader(file);
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
+    public String readFile(String path) {
+        File file = new File(path);
 
-            String line = null;
+        FileInputStream is = null;
+
+        try {
+            is = new FileInputStream(file);
+            byte[] buffer = new byte[1024];
+            int length;
             String result = "";
 
-            while ((line = bufferedReader.readLine()) != null) {
-                result += line + "\n";
+            while ((length = is.read(buffer)) > 0) {
+                result += new String(buffer, 0, length);
             }
 
+            is.close();
+
             return result;
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException  e) {
+            e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return null;
     }
 
-    public String readFile2(String filePath)
-            throws Exception {
-        File file = new File(filePath);
-        FileReader fileReader = new FileReader(file);
-        BufferedReader bufferedReader = new BufferedReader(fileReader);
+    public String readFile2(String path) throws IOException {
+        File file = new File(path);
+        FileInputStream is = null;
 
-        String line = null;
+        is = new FileInputStream(file);
+        byte[] buffer = new byte[1024];
+        int length;
         String result = "";
 
-        while ((line = bufferedReader.readLine()) != null) {
-            result += line + "\n";
+        while ((length = is.read(buffer)) > 0) {
+            result += new String(buffer, 0, length);
         }
+
+        is.close();
 
         return result;
     }
 
+
     public static void main(String[] args) {
         FileStudy study = new FileStudy();
-        String str = study.readFile("C:/Users/helloaaa.txt");
+        String str = study.readFile("c:/90_etc/abcd.jpg");
+
         System.out.println(str);
     }
 

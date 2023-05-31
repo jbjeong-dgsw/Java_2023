@@ -2,7 +2,6 @@ package kr.hs.dgsw.java.exception4;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
 
 public class MyFileReader {
 
@@ -24,12 +23,13 @@ public class MyFileReader {
 
             return result;
         } catch (Exception e) {
-            throw new RuntimeException(e.getMessage(), e);
+            throw new RuntimeException("파일을 읽을 수 없습니다.");
         } finally {
-            if (is != null) {
-                try {
+            try {
+                if (is != null) {
                     is.close();
-                } catch (IOException e1) {}
+                }
+            } catch (Exception e1) {
             }
         }
     }
