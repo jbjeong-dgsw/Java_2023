@@ -9,14 +9,14 @@ public class MyFileCopier {
         OutputStream os = null;
 
         try {
-            is = new FileInputStream(src);
-            os = new FileOutputStream(dest);
+            is = new FileInputStream(src);  // 읽어 올 파일의 input stream 생성
+            os = new FileOutputStream(dest);    // 쓸 파일의 output stream 생성
 
             int length;
-            byte[] buffer = new byte[1024];
+            byte[] buffer = new byte[1024]; // 과도한 메모리 사용을 방지하기 위해서 1KB 버퍼 마련
 
-            while ((length = is.read(buffer)) > 0) {
-                os.write(buffer, 0, length);
+            while ((length = is.read(buffer)) > 0) {    // 읽어온 byte 개수가 0보다 크면 계속 반복
+                os.write(buffer, 0, length);    // buffer 의 내용을 output stream 에 써 준다.
             }
 
         } catch (Exception e) {
