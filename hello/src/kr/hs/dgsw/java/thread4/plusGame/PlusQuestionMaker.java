@@ -8,8 +8,8 @@ public class PlusQuestionMaker implements QuestionMaker {
     @Override
     public Question makeQuestion() {
         PlusQuestion question =
-                new PlusQuestion(random.nextInt(900) + 100,
-                        random.nextInt(900) + 100);
+                new PlusQuestion(random.nextInt(90) + 10,
+                        random.nextInt(90) + 10);
 
         return question;
     }
