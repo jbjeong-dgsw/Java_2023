@@ -12,9 +12,12 @@ public class Boss {
 
     public void offer(int money, int id) {
         System.out.printf("조직원 %d 상납금 %d\n", id, money);
-        int temp = safeBox.getAmount();
-        temp = temp + money;
-        safeBox.setAmount(temp);
+
+        synchronized (this) {
+            int temp = safeBox.getAmount();
+            temp = temp + money;
+            safeBox.setAmount(temp);
+        }
     }
 
     public void printMyMoney() {
